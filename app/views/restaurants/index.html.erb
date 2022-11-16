@@ -1,0 +1,12 @@
+<h1>Restaurants#index</h1>
+<p>Find me in app/views/restaurants/index.html.erb</p>
+<div class="container my-30">
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+      <p>Address: <%= restaurant.address %></p>
+      <p>Phone number: <%= restaurant.phone_number %></p>
+      <p>Category: <%= restaurant.category %></p>
+    <% end %>
+  </ul>
+</div>
